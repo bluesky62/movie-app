@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- ======= Services Section ======= -->
+<section id="services" class="services section-bg" style="background-color: black;">
+    <div class="container" data-aos="fade-up">
+
+      
+
+      <div class="section-title" style="color:blanchedalmond">
+        <h2 style="color: bisque;">Services</h2>
+        <p>Built on its varied expertise and domain knowledge, Kumar Solutions offer clients a wide range of IT,
+          Mechanical and R&D services keeping up to the promise of being "the complete engineering solution company".
+          These services enable business to "Do Business Better" through optimum use of technology and process
+          excellence and help you to perform a way distinctively in this dynamic market environment.
+
+          Agile. Responsive. Unique.
+
+          You need to be all these to stay out in front. We give you the flexibility and power you need to get there.
+          Let us help you optimize business processes for maximum efficiency and galvanize your IT/ Mechanical
+          infrastructure to be both resilient and robust.Various services that facilitate you to be the lead are the
+          part of our organisation that includes ERP, Customised Web Services, Mechanical Design and Outsourcing as
+          well.</p>
+      </div>
+      <div class="col-12">
+        <!-- <form method="get">
+          <input type="text" name="servicename" value="">
+          <input type="submit" value="Search">
+        </form> -->
+      
+      </div>
+
+      <div class="row">
+        {% for n in service_data %}
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><i class="{{n.service_icon}}"></i></div>
+            <h4><a href=""></a>{{n.service_title}}</h4>
+            {{n.service_discription }}
+          </div>
+        </div>
+        
+        {% endfor %}
+
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="/services/?page=1">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+        
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}

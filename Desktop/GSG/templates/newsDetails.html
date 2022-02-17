@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="" class="newsDiscription" style="background-color: black; font-family: Arial,">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>newsDiscription</h2>
+      </div>
+      {% for n in newsdata %}
+      
+      <div class="news content">
+        <div class="col-lg-6" style="color: burlywood; text-align: center;">
+          <h1>{{n.news_title}}</h1>
+          
+        </div>
+        <div class="col-lg-6">
+          <img src="/media/{{n.news_image}}" alt="" class="img-fluid" />
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0" style="color: cornsilk;">
+          
+              <p>{{n.news_description | safe}}</p>
+
+          <a href="#" class="btn-learn-more">Learn More</a>
+        </div>
+        
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}
